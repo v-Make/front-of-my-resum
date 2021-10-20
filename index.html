@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>resume</title>
+</head>
+
+<body>
+    <header>
+        <span id="left"><img src="my photo.png" alt="my photo" width="150" height="150"></span>
+        <h4 id="res">РЕЗЮМЕ</h4>
+        <div></div>
+    </header>
+        <div id="app">
+            <main>
+            <article>
+                <div v-if="viewBlock">
+                    <p>{{item.surname}}</p>
+                    <p>{{item.name}}</p>
+                    <p>{{item.patronymic}}</p>
+                    <p>{{item.dateOfBirth}}</p>
+                    <p>{{item.married}}</p>
+                    <p>{{item.residence}}</p>
+                </div>
+                <div v-else>
+                    <h1>Что такое Lorem Ipsum?</h1>
+                    <p id="information">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem
+                        Ipsum является стандартной
+                        "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал
+                        большую коллекцию
+                        размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только
+                        успешно пережил без
+                        заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое
+                        время</p>
+                </div>
+            </article>
+            <nav>
+                <ul id="nav">
+                    <li id="load" @click="Post"><a href="#">
+                            <h4>О СЕБЕ</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>ОБРАЗОВАНИЕ</h4>
+                        </a></li>
+                    <li><a href="#">ОПЫТ РАБОТЫ</a></li>
+                    <li><a href="#">
+                            <h4>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</h4>
+                        </a></li>
+                </ul>
+                <!-- <h4>О СЕБЕ</h4>
+            <h4>ОБРАЗОВАНИЕ</h4>
+            <h4>ОПЫТ РАБОТЫ</h4>
+            <h4>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</h4> -->
+            </nav>
+            <aside>
+                <h4>Мои социальные сети</h4>
+                <ul id="social">
+                    <li><a href="https://wa.me/+77075929215" target="_blank">Whatsapp</a></li>
+                    <li><a target="_blank" href="https://t.me/MarLen161282">Telegram</a></li>
+                    <li><a href="https://instagram.com/mmuhambetalinov" target="_blank">Instagram</a></li>
+                </ul>
+            </aside>
+    </main>
+</div>
+    <footer>Copyright 2021&copy;Все права защищены.</footer>
+    <script src="appVue.js"></script>
+</body>
+
+</html>
