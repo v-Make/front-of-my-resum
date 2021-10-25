@@ -20,17 +20,37 @@
         <div id="app">
             <main>
             <article>
-                <div v-if="viewBlock">
-                    <p>{{item.surname}}</p>
-                    <p>{{item.name}}</p>
-                    <p>{{item.patronymic}}</p>
-                    <p>{{item.dateOfBirth}}</p>
-                    <p>{{item.married}}</p>
-                    <p>{{item.residence}}</p>
+                <div v-if="viewBlock===1">
+                    <p>{{item[0].surname}}</p>
+                    <p>{{item[0].name}}</p>
+                    <p>{{item[0].patronymic}}</p>
+                    <p>{{item[0].dateOfBirth}}</p>
+                    <p>{{item[0].married}}</p>
+                    <p>{{item[0].residence}}</p>
+                </div>
+                <div v-else-if="viewBlock===2">
+                    <p>{{item[1].year}}</p>
+                    <p>{{item[1].institute}}</p>
+                    <p>{{item[1].branch}}</p>
+                    <p>{{item[1].year2}}</p>
+                    <p>{{item[1].institute2}}</p>
+                    <p>{{item[1].branch2}}</p>
+                </div>
+                <div v-else-if="viewBlock===3">
+                    <p>{{item[2].year}}</p>
+                    <p>{{item[2].position}}</p>
+                    <p>{{item[2].place}}</p>
+                    <p>{{item[2].year2}}</p>
+                    <p>{{item[2].position2}}</p>
+                    <p>{{item[2].place2}}</p>
+                </div>
+                <div v-else-if="viewBlock===4">
+                    <p>{{item[3].skills}}</p>
+                    <p>{{item[3].source}}</p>
                 </div>
                 <div v-else>
                     <h1>Что такое Lorem Ipsum?</h1>
-                    <p id="information">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem
                         Ipsum является стандартной
                         "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал
                         большую коллекцию
@@ -42,21 +62,19 @@
             </article>
             <nav>
                 <ul id="nav">
-                    <li id="load" @click="Post"><a href="#">
+                    <li @click="Post1"><a href="#">
                             <h4>О СЕБЕ</h4>
                         </a></li>
-                    <li><a href="#">
+                    <li @click="Post2"><a href="#">
                             <h4>ОБРАЗОВАНИЕ</h4>
                         </a></li>
-                    <li><a href="#">ОПЫТ РАБОТЫ</a></li>
-                    <li><a href="#">
-                            <h4>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</h4>
+                    <li @click="Post3"><a href="#">
+                        <h4>ОПЫТ РАБОТЫ</h4>
+                        </a></li>
+                    <li @click="Post4"><a href="#">
+                        <h4>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</h4>
                         </a></li>
                 </ul>
-                <!-- <h4>О СЕБЕ</h4>
-            <h4>ОБРАЗОВАНИЕ</h4>
-            <h4>ОПЫТ РАБОТЫ</h4>
-            <h4>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</h4> -->
             </nav>
             <aside>
                 <h4>Мои социальные сети</h4>
