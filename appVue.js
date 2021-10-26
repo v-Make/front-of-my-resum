@@ -6,18 +6,9 @@ viewBlock : 0,
         }
     },
     methods: {
-        Post1: function() {
-           this.viewBlock=1;
-        },
-        Post2:function() {
-            this.viewBlock=2;
-         },
-         Post3:function() {
-            this.viewBlock=3;
-         },
-         Post4:function() {
-            this.viewBlock=4;
-         },
+        Post: function(value) {
+           this.viewBlock=value;
+        }
     },
     mounted(){
         axios
