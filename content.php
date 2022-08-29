@@ -6,8 +6,8 @@ $mainArr=
       'surname'=> 'Мухамбеталинов',
       'name'=> 'Марлен',
       'patronymic'=> 'Серикович',
-      'dateOfBirth' => '16 декабря 1982г.р.(38 лет)',
-      'married'=>'Женатый, двое детей',
+      'dateOfBirth' => '16 декабря 1982г.р.',
+      'married'=>'Женатый, трое детей',
       'residence'=>'проживаю в г. Кокшетау'
    ],
    [
@@ -27,7 +27,7 @@ $mainArr=
       'position2'=> 'Программист,Инженер ГИС',
    ],
    [
-      'skills'=> 'HTML/CSS,JS,Vuejs,PHP,Git',
+      'skills'=> 'HTML/CSS,JS,Vuejs,PHP/MySQL,Laravel,Python,Git',
       'source'=> 'из youtube-каналов и официальной документации'
    ]
 ];
